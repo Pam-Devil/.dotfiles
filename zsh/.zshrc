@@ -122,5 +122,15 @@ alias cls="clear"
 alias .zshrc="nvim $HOME/.zshrc"
 alias szsh="source $HOME/.zshrc"
 
+gpush() {
+  local now=$(date +"%Y-%m-%d %H:%M:%S")
+  local msg="$1"
+  if [ -z "$msg" ]; then
+    make -C $HOME/.dotfiles COMMIT_MSG="Auto-commit: $now"
+  else
+    make -C $HOME/.dotfiles COMMIT_MSG="$msg"
+  fi
+}
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

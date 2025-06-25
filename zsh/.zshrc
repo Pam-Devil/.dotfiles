@@ -10,7 +10,7 @@ fi
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-
+export MANPAGER='nvim --clean +Man!'
 LC_CTYPE=en_US.UTF-8
 LC_ALL=en_US.UTF-8
 # Set name of the theme to load --- if set to "random", it will
@@ -118,6 +118,7 @@ alias ls="ls -la"
 alias nvim="nvim"
 alias fvi="fzf --preview="bat{}"| xargs -r nvim"
 alias sucd='cd "$(fzf --preview="if [ -d {} ]; then ls -la {}; else bat --style=numbers --color=always {}; fi" | xargs -r dirname)"'
+alias fzd='cd "$(find / -type d 2>/dev/null | fzf)"'
 alias cls="clear"
 alias .zshrc="nvim $HOME/.zshrc"
 alias szsh="source $HOME/.zshrc"

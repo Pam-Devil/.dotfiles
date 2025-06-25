@@ -9,11 +9,11 @@ QUICK_INSTALL
 WORKFLOW
   The main objective here is to get a quick-flow workflow that works fast and can be quickly re-made in case of a full reinstall of the system. I'll be working on separate layers of control, the diagram below explains the layout expected for the layers. 
   Workspaces
-    WinKey-1: Terminal
-    WinKey-2: Browser
-    WinKey-3: Discord
-    WinKey-4: Music/Fun
-    WinKey-5: dunno 
+    <C-A-1>: Terminal
+    <C-A-2>: Browser
+    <C-A-3>: Discord
+    <C-A-4>: Music/Fun
+    <C-A-5>: dunno 
   custom keybinds-AHK
     <C-A-t>: Launch a terminal with WSL2 Arch running tmux
   tmux-session layout

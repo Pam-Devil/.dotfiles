@@ -122,6 +122,7 @@ alias fzd='cd "$(find / -type d 2>/dev/null | fzf)"'
 alias cls="clear"
 alias .zshrc="nvim $HOME/.zshrc"
 alias szsh="source $HOME/.zshrc"
+alias mansys="nvim $HOME/.dotfiles/documents/documents/notes/man_system.typ"
 mktouch () {
     mkdir -p "$(dirname "$1")" && touch "$1"
 }

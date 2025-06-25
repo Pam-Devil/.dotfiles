@@ -122,6 +122,9 @@ alias fzd='cd "$(find / -type d 2>/dev/null | fzf)"'
 alias cls="clear"
 alias .zshrc="nvim $HOME/.zshrc"
 alias szsh="source $HOME/.zshrc"
+mktouch () {
+    mkdir -p "$(dirname "$1")" && touch "$1"
+}
 
 gpush() {
   local now=$(date +"%Y-%m-%d %H:%M:%S")

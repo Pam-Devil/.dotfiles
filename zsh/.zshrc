@@ -137,5 +137,10 @@ gpush() {
   fi
 }
 
+# Keybinds
+bindkey -s '^f' '$HOME/.dotfiles/scripts/tmux-sm.zsh\n'
+bindkey -s '^i' '$HOME/.dotfiles/scripts/chtsh.zsh\n'
+
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

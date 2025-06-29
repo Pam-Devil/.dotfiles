@@ -8,5 +8,7 @@ read "query?Query:"
 if printf $languages | grep -qs $selected; then
     tmux split-window -h bash -c "curl cht.sh/$selected/`echo $query |tr ' ' '+'` |bat; read'?press key to exit...' "
 else
-    curl cht.sh/$selected~$query |bat
+
+    tmux split-window -h bash -c "curl cht.sh/$selected~$query |bat; read'?press key to exit...'"
+    
 fi

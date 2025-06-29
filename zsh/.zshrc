@@ -81,7 +81,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
-source $ZSH/oh-my-zsh.sh
+#source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -112,6 +112,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+#autoload -Uz compinit && compinit
+#autoload -Uz zle
+
 fastfetch
 alias fasf="fastfetch"
 alias ls="ls -la"
@@ -138,8 +141,9 @@ gpush() {
 }
 
 # Keybinds
+bindkey '^I' expand-or-complete
 bindkey -s '^f' '$HOME/.dotfiles/scripts/tmux-sm.zsh\n'
-bindkey -s '^i' '$HOME/.dotfiles/scripts/chtsh.zsh\n'
+bindkey -s '^H' '$HOME/.dotfiles/scripts/chtsh.zsh\n'
 
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.

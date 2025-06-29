@@ -28,7 +28,7 @@ WORKFLOW
 SHELL
 ## All the most important shell commands and CLI Tools I find important to use and the most important bits to use each of them
   <C-f>: Opens a fzf window that it's selected content will be opened in a new tmux session. 
-
+  <C-i>: Opens a cheatsheet window for languages or core-utils. 
 TMUX 
 ## All my TMUX custom configs and keybinds
 

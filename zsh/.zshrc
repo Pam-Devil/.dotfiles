@@ -81,7 +81,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
-#source $ZSH/oh-my-zsh.sh
+source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -116,7 +116,7 @@ plugins=(git)
 #autoload -Uz zle
 
 fastfetch
-alias fasf="fastfetch"
+
 alias ls="ls -la"
 alias nvim="nvim"
 alias fvi="fzf --preview="bat{}"| xargs -r nvim"

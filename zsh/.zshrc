@@ -119,7 +119,7 @@ fastfetch
 
 alias ls="ls -la"
 alias nvim="nvim"
-alias fvi="fzf --preview="bat{}"| xargs -r nvim"
+alias fvi="fzf --preview='bat {}'| xargs -r nvim"
 alias sucd='cd "$(fzf --preview="if [ -d {} ]; then ls -la {}; else bat --style=numbers --color=always {}; fi" | xargs -r dirname)"'
 alias fzd='cd "$(find / -type d 2>/dev/null | fzf)"'
 alias cls="clear"
@@ -139,10 +139,12 @@ gpush() {
     make -C $HOME/.dotfiles COMMIT_MSG="$msg"
   fi
 }
-
+fzf-tmux-session(){
+    $HOME/.dotfiles/scripts/tmux-sm.zsh   
+}
 # Keybinds
 bindkey '^I' expand-or-complete
-bindkey -s '^f' '$HOME/.dotfiles/scripts/tmux-sm.zsh\n'
+bindkey -s '^f' 'fzf-tmux-session\n'
 bindkey -s '^H' '$HOME/.dotfiles/scripts/chtsh.zsh\n'
 
 

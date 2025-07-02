@@ -13,7 +13,7 @@ return {
         },
         config = function ()
             require("mason-lspconfig").setup({
-                ensure_installed = {"lua_ls","rust_analyzer","pyright"}
+                ensure_installed = {"lua_ls","rust_analyzer","pyright","ts_ls","gopls"}
             })
         end
     },
@@ -28,6 +28,11 @@ return {
             })
             vim.lsp.enable("pyright")
             vim.lsp.enable("lua_ls")
+            vim.lsp.enable("ts_ls")
+            vim.lsp.config("ts_ls",{
+                cmd = {"typescript-language-server","--stdio"}
+            })
+            vim.lsp.enable('gopls')
             vim.lsp.config("lua_ls",{})
             vim.lsp.config("pyright",{})
             vim.keymap.set('n','K',vim.lsp.buf.hover, {})

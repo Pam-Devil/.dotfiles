@@ -13,6 +13,15 @@ vim.cmd("set directory=~/.config/nvim/swap")
 vim.cmd("set splitright")
 vim.cmd("set splitbelow")
 
+local tpath = io.popen("luarocks path --lr-path")
+local tcpath = io.popen("luarocks path --lr-cpath")
+local xpath = tpath:read("*a")
+local xcpath= tcpath:read("*a")
+tpath:close()
+tcpath:close()
+package.path = xpath .. ";" .. package.path
+package.cpath = xcpath .. ";" .. package.cpath
+
 vim.keymap.set('n','<leader>n',':Neotree filesystem reveal left<CR>')
 
 

@@ -6,6 +6,7 @@ vim.keymap.set("n", "<A-j>", "<C-w>j")
 vim.keymap.set("n", "<A-k>", "<C-w>k")
 vim.keymap.set("n", "<A-l>", "<C-w>l")
 vim.keymap.set("n", "<A-x>", ":split<CR><C-w>j", { silent = true })
+-- TODO: Adjust the keymap patterns for better recognition
 vim.keymap.set("n", "<A-v>", "<C-w>v<C-w>l")
 vim.keymap.set("n", "<A-c>", "<C-w>c")
 vim.keymap.set("n", "<A-f>", ":Neotree filesystem reveal left toggle=true<CR>", { silent = true })

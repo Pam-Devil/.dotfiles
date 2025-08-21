@@ -1,5 +1,6 @@
 require("config")
 require("config.lazy")
+require("scripts")
 require("lazy").setup("plugins")
 
 vim.cmd("set expandtab")
@@ -10,3 +11,5 @@ vim.cmd("set number")
 vim.cmd("set relativenumber")
 vim.cmd("set showcmd")
 vim.cmd("set clipboard=unnamedplus")
+
+vim.cmd("highlight Normal guibg=NONE ctermbg=NONE")

@@ -22,6 +22,8 @@ tcpath:close()
 package.path = xpath .. ";" .. package.path
 package.cpath = xcpath .. ";" .. package.cpath
 
+vim.api.nvim_set_hl(0, "NeoTreeGitIgnored", {fg = "#A9A9A9"})
+
 vim.keymap.set('n','<leader>n',':Neotree filesystem reveal left<CR>')
 
 

@@ -14,7 +14,13 @@ vim.keymap.set('n', '<leader>q',':quit<CR>')
 vim.pack.add({
     {src = "https://github.com/catppuccin/nvim"}, 
     {src = "https://github.com/vague2k/vague.nvim"},
+    {src = "https://github.com/nvim-lua/plenary.nvim"},
+    {src = "https://github.com/nvim-telescope/telescope.nvim"},
+    {src = "https://github.com/folke/flash.nvim"},
+    {src = "https://github.com/nvim-lualine/lualine.nvim"},
+    {src = "https://github.com/nvim-mini/mini.files"},
+    {src = "https://github.com/nvim-tree/nvim-web-devicons"},
 })
-
+require ('lualine').setup({})
 vim.cmd("colorscheme catppuccin")
 vim.cmd("hi statusline guibg=NONE")

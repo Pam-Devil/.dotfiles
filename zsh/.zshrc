@@ -14,6 +14,7 @@ export ZSH="$HOME/.oh-my-zsh"
 export MANPAGER='nvim +Man!'
 export PATH=$PATH:/root/.cargo/bin
 export PATH=$PATH:$HOME/.cargo/bin
+export PATH=$HOME/.local/bin:$PATH
 LC_CTYPE=en_US.UTF-8
 LC_ALL=en_US.UTF-8
 # Set name of the theme to load --- if set to "random", it will
